@@ -95,8 +95,8 @@ Jakaria Jishan
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Additional functional pages**
-- **User info collection through forms**
+- **Implement Add and remove functionalities in to do list**
+- **Implement more interactive list**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
