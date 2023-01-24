@@ -18,9 +18,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Awesome Book with es6 <a name="about-project"></a>
+# 📖 To Do List App <a name="about-project"></a>
 
-'Awesome book es6' is the project of pure js in the Microverse program 2nd module, made for learning purposes.
+'o Do List' is the project of pure js in the Microverse program 2nd module, made for learning purposes.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -50,7 +50,7 @@
 
 You can checkout the running website here:
 
-- [Live Demo Link](https://github.com/JakariaJishan/Awesome-books-es6/)
+- [Live Demo Link](https://github.com/JakariaJishan/to-do-list/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -106,7 +106,7 @@ Jakaria Jishan
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/JakariaJishan/Awesome-book-es6/issues).
+Feel free to check the [issues page](https://github.com/JakariaJishan/to-do-list/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
