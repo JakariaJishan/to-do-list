@@ -20,7 +20,7 @@ const addTodo = (userTask) => {
 
 const updateTask = (value, id) => {
   const todos = JSON.parse(localStorage.getItem('todos'));
-  const newArr = todos.findIndex((elem) => elem.index === id);
+  const newArr = todos.findIndex((elem) => elem.index === Number(id));
   todos[newArr].desc = value;
   localStorage.setItem('todos', JSON.stringify(todos) || []);
 };
@@ -30,7 +30,6 @@ const updateTask = (value, id) => {
 const removeTodo = (id) => {
   const todos = JSON.parse(localStorage.getItem('todos'));
   const newTodos = todos.filter((item) => item.index !== id);
-  // newTodos.map((elem, index) => newTodos[index].id = index + 1);
   for (let i = 0; i < newTodos.length; i += 1) {
     newTodos[i].index = i + 1;
   }
