@@ -1,5 +1,5 @@
+import { clearCompleted, markComplete, removeTodo, updateTask } from './interaction.js';
 import './style.css';
-
 let todoArr = [];
 
 todoArr = JSON.parse(localStorage.getItem('todos')) || [];
@@ -14,27 +14,6 @@ const addTodo = (userTask) => {
     completed: false,
   });
   localStorage.setItem('todos', JSON.stringify(todoArr) || []);
-};
-
-// update todo
-
-const updateTask = (value, id) => {
-  const todos = JSON.parse(localStorage.getItem('todos'));
-  const newArr = todos.findIndex((elem) => elem.index === Number(id));
-  todos[newArr].desc = value;
-  localStorage.setItem('todos', JSON.stringify(todos) || []);
-};
-
-// remove item
-
-const removeTodo = (id) => {
-  const todos = JSON.parse(localStorage.getItem('todos'));
-  const newTodos = todos.filter((item) => item.index !== id);
-  for (let i = 0; i < newTodos.length; i += 1) {
-    newTodos[i].index = i + 1;
-  }
-  localStorage.setItem('todos', JSON.stringify(newTodos) || []);
-  window.location.reload();
 };
 
 // get user input value
@@ -72,8 +51,17 @@ const displayTodo = () => {
     removeBtn.addEventListener('click', () => {
       removeTodo(todo.index);
     });
+    checkBox.addEventListener('change', (e)=>{
+      markComplete(todo.index, e.target.checked)
+      
+    })
   });
   todoList.appendChild(ul);
+
+  document.getElementById('clear-all-completed').addEventListener('click', () =>{
+    clearCompleted()
+  })
+  
 };
 
 displayTodo();
@@ -93,3 +81,12 @@ document.querySelectorAll('.list').forEach((item) => {
     });
   });
 });
+
+window.onload = () =>{
+  const todos = JSON.parse(localStorage.getItem('todos'));
+  for (let i = 0; i < todos.length; i++) {
+    todos[i].completed = false;
+   
+  }
+  localStorage.setItem('todos', JSON.stringify(todos) || []);
+}
