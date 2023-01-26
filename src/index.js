@@ -9,7 +9,7 @@ const form = document.querySelector('form');
 
 const addTodo = (userTask) => {
   todoArr.push({
-    id: todoArr.length + 1,
+    index: todoArr.length + 1,
     desc: userTask,
     completed: false,
   });
