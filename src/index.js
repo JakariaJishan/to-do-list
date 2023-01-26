@@ -20,7 +20,7 @@ const addTodo = (userTask) => {
 
 const updateTask = (value, id) => {
   const todos = JSON.parse(localStorage.getItem('todos'));
-  const newArr = todos.findIndex((elem) => elem.id === id);
+  const newArr = todos.findIndex((elem) => elem.index === id);
   todos[newArr].desc = value;
   localStorage.setItem('todos', JSON.stringify(todos) || []);
 };
@@ -29,10 +29,10 @@ const updateTask = (value, id) => {
 
 const removeTodo = (id) => {
   const todos = JSON.parse(localStorage.getItem('todos'));
-  const newTodos = todos.filter((item) => item.id !== id);
+  const newTodos = todos.filter((item) => item.index !== id);
   // newTodos.map((elem, index) => newTodos[index].id = index + 1);
   for (let i = 0; i < newTodos.length; i += 1) {
-    newTodos[i].id = i + 1;
+    newTodos[i].index = i + 1;
   }
   localStorage.setItem('todos', JSON.stringify(newTodos) || []);
   window.location.reload();
@@ -64,14 +64,14 @@ const displayTodo = () => {
     removeBtn.setAttribute('class', 'delete-icon');
     checkBox.type = 'checkbox';
     p.setAttribute('class', 'list');
-    p.setAttribute('id', todo.id);
+    p.setAttribute('id', todo.index);
     li.appendChild(checkBox);
     li.appendChild(p);
     li.appendChild(removeBtn);
     p.innerHTML += todo.desc;
     ul.appendChild(li);
     removeBtn.addEventListener('click', () => {
-      removeTodo(todo.id);
+      removeTodo(todo.index);
     });
   });
   todoList.appendChild(ul);
