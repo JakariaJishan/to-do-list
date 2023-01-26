@@ -43,6 +43,12 @@ li {
   outline: none;
 }
 
+.list {
+  width: 100%;
+
+  /* outline: none; */
+}
+
 form {
   display: flex;
   justify-content: space-between;
@@ -62,7 +68,6 @@ form input {
 .todo-list li,
 .todo-list li .list {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 5px;
 }
@@ -131,5 +136,5 @@ form input {
   border: none;
   cursor: pointer;
   opacity: 0.5;
-  display: none;
+  display: block;
 }
