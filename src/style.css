@@ -135,6 +135,6 @@ form input {
   display: block;
 }
 
-input[type=checkbox]:checked+.list {
+input[type=checkbox]:checked + .list {
   text-decoration: line-through;
 }

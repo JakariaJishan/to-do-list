@@ -1,5 +1,8 @@
-import { clearCompleted, markComplete, removeTodo, updateTask } from './interaction.js';
+import {
+  clearCompleted, markComplete, removeTodo, updateTask,
+} from './interaction.js';
 import './style.css';
+
 let todoArr = [];
 
 todoArr = JSON.parse(localStorage.getItem('todos')) || [];
@@ -51,17 +54,15 @@ const displayTodo = () => {
     removeBtn.addEventListener('click', () => {
       removeTodo(todo.index);
     });
-    checkBox.addEventListener('change', (e)=>{
-      markComplete(todo.index, e.target.checked)
-      
-    })
+    checkBox.addEventListener('change', (e) => {
+      markComplete(todo.index, e.target.checked);
+    });
   });
   todoList.appendChild(ul);
 
-  document.getElementById('clear-all-completed').addEventListener('click', () =>{
-    clearCompleted()
-  })
-  
+  document.getElementById('clear-all-completed').addEventListener('click', () => {
+    clearCompleted();
+  });
 };
 
 displayTodo();
@@ -82,11 +83,10 @@ document.querySelectorAll('.list').forEach((item) => {
   });
 });
 
-window.onload = () =>{
+window.onload = () => {
   const todos = JSON.parse(localStorage.getItem('todos'));
-  for (let i = 0; i < todos.length; i++) {
+  for (let i = 0; i < todos.length; i += 1) {
     todos[i].completed = false;
-   
   }
   localStorage.setItem('todos', JSON.stringify(todos) || []);
-}
+};
