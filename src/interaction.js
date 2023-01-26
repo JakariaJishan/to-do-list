@@ -26,6 +26,7 @@ const markComplete = (id, check) => {
   todos.forEach((item, ind) => {
     if (item.index === Number(id)) {
       todos[ind].completed = check;
+      todos[ind].index = ind + 1;
     }
   });
   localStorage.setItem('todos', JSON.stringify(todos) || []);
@@ -35,6 +36,9 @@ const markComplete = (id, check) => {
 const clearCompleted = () => {
   const todos = JSON.parse(localStorage.getItem('todos'));
   const completedTodos = todos.filter((item) => item.completed !== true);
+  for (let i = 0; i < completedTodos.length; i += 1) {
+    completedTodos[i].index = i + 1;
+  }
   localStorage.setItem('todos', JSON.stringify(completedTodos) || []);
   window.location.reload();
 };
