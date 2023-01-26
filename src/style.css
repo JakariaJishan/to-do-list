@@ -76,10 +76,6 @@ form input {
   margin-right: 5px;
 }
 
-#list-text {
-  /* outline: none; */
-}
-
 .clear-all {
   text-align: center;
   cursor: pointer;
