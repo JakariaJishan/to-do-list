@@ -40,6 +40,13 @@ form,
 li {
   list-style: none;
   border-bottom: 3px solid #f3f3f3;
+  outline: none;
+}
+
+.list {
+  width: 100%;
+
+  /* outline: none; */
 }
 
 form {
@@ -58,15 +65,14 @@ form input {
   font-size: 18px;
 }
 
-.todo-list ul li,
-.todo-list ul li .list {
+.todo-list li,
+.todo-list li .list {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 5px;
 }
 
-.todo-list ul li .list input[type="checkbox"] {
+.todo-list li .list input[type="checkbox"] {
   margin-right: 5px;
 }
 
@@ -113,4 +119,18 @@ form input {
   border: none;
   cursor: pointer;
   opacity: 0.5;
+  display: block;
+}
+
+.delete-icon {
+  background: url('./images/delete.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+  display: block;
 }

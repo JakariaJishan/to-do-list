@@ -20,7 +20,7 @@
 
 # 📖 To Do List App <a name="about-project"></a>
 
-'o Do List' is the project of pure js in the Microverse program 2nd module, made for learning purposes.
+'To Do List' is the project of pure js in the Microverse program 2nd module, made for learning purposes.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -85,9 +85,9 @@ I do recommend this method given it is easier, but if you want you can make this
 
 ## 👤 Author <a name="author"></a>
 
-Jakaria Jishan
+Golam Jakaria
 
-- GitHub: [@Jakaria jishan](https://github.com/JakariaJishan)
+- GitHub: [@Jakaria Jishan](https://github.com/JakariaJishan)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -128,6 +128,6 @@ If you like this project, please make sure to visit my page and checkout my othe
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/microverseinc/readme-template/blob/master/MIT.md) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
