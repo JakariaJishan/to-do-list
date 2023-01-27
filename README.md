@@ -50,7 +50,7 @@
 
 You can checkout the running website here:
 
-- [Live Demo Link](https://github.com/JakariaJishan/to-do-list/)
+- [Live Demo Link](https://jakariajishan.github.io/to-do-list/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
